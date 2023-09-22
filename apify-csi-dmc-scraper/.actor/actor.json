@@ -1,0 +1,43 @@
+{
+	"actorSpecification": 1,
+	"name": "scrapy-apify",
+	"title": "Scraping data from csi-dmc.com",
+	"description": "Scrapes titles, text and images of website using Scrapy.",
+	"version": "0.1",
+	"meta": {
+		"templateId": "python-scrapy"
+	},
+	"input": "./input_schema.json",
+	"dockerfile": "./Dockerfile",
+	"storages": {
+		"dataset": {
+			"actorSpecification": 1,
+			"title": "URLs and their data",
+			"views": {
+				"titles": {
+					"title": "Titles, texts and images",
+					"transformation": {
+						"fields": [
+							"title",
+							"text",
+							"images"
+						]
+					},
+					"display": {
+						"component": "table",
+						"properties": {
+							"url": {
+								"label": "URL",
+								"format": "text"
+							},
+							"title": {
+								"label": "Title",
+								"format": "text"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

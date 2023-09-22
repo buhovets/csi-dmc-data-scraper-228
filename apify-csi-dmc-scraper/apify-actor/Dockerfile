@@ -5,6 +5,6 @@ COPY poetry.lock pyproject.toml ./
 RUN pip3 install poetry && \
     poetry install --no-root
 
-COPY . ./
+COPY .. ./
 
 CMD ["python3", "-m", "src"]

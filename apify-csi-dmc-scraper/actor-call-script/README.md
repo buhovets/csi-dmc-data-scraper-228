@@ -1,4 +1,5 @@
 # Remote actor call script
+This is the script used to execute the deployed actor. To deploy an actor, use the `apify-actor/README.md`.
 
 ### Prerequisites
 ```text
